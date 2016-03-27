@@ -1,0 +1,31 @@
+{
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": 5,
+    "sourceType": "script"
+  },
+  "env": {
+    "browser": true,
+    "node": false
+  },
+  "globals": {
+    "angular": false,
+    "browser": false,
+    "element": false,
+    "by": false,
+    "describe": false,
+    "beforeEach": false,
+    "it": false,
+    "expect": false
+  },
+  "rules": {
+    "semi": ["error", "always", {"omitLastInOneLineBlock": true}],
+    "quotes": ["warn", "single"],
+    "no-console": ["warn", {"allow": ["warn", "error"]}],
+    "no-alert": "error",
+    "strict": ["warn", "function"],
+    "complexity": ["error", 10],
+    "max-depth": ["error", {"maximum": 2}],
+    "max-len": ["warn", {"code": 120, "tabWidth": 2}]
+  }
+}
