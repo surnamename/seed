@@ -1,4 +1,4 @@
-angular.module('app').animation('.phone', function () {
+angular.module('app.pages.phone').animation('.phone', function () {
   'use strict';
 
   var animateUp = function (element, className, done) {

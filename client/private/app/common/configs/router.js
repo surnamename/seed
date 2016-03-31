@@ -1,4 +1,4 @@
-angular.module('app').config(function ($stateProvider, $urlRouterProvider, $locationProvider, $ocLazyLoadProvider) {
+angular.module('app').config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
   'use strict';
 
   $locationProvider.html5Mode(false);
@@ -11,7 +11,7 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider, $loca
       url: '/phones',
       views: {
         //'nav': {templateUrl: PATHS.templates.components + 'nav.html', controller: 'navCtrl as nav'},
-        'content': {template: '<phones-list></phones-list>'}
+        'content': {template: '<phones></phones>'}
         //'footer': {templateUrl: PATHS.templates.components + 'footer.html', controller: 'footerCtrl as footer'}
       }
     })
@@ -19,17 +19,12 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider, $loca
     .state('phones.id', {
       url: '/:id',
       views: {
-        'content@': {template: '<phone-details></phone-details>'}
+        'content@': {template: '<phone></phone>'}
+      },
+      resolve: {
+        loadMyCtrl: function ($ocLazyLoad) {
+          return $ocLazyLoad.load('app.pages.phone');
+        }
       }
     });
-
-
-
-  $ocLazyLoadProvider.config({
-    debug: true,
-    events: true,
-    modules: [
-      {name: 'TestModule', files: ['js/TestModule.js']}
-    ]
-  });
 });

@@ -1,4 +1,4 @@
-angular.module('app.pages.phoneDetails').filter('checkmark', function () {
+angular.module('app.pages.phone').filter('checkmark', function () {
   'use strict';
 
   return function (input) {
