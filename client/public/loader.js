@@ -4,7 +4,7 @@
   var headEl = document.getElementsByTagName('head')[0],
       head = false, body = true;
 
-  if (production) addTag('base', {href: "/seed/client"});
+  if (production) addTag('base', {href: "/seed/client/"});
   else addTag('base', {href: "/"});
 
   if (navigator.userAgent.indexOf("MSIE 10") === -1
