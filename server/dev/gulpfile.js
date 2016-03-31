@@ -28,7 +28,11 @@ var paths = {
   ],
   styles: '../../client/private/app/**/*.css',
   sprites: '../../client/private/app/**/img-css/*.css',
-  images: '../../client/private/app/**/img/**/*.',
+  images: [
+    '../../client/private/app/**/img/**/*.',
+    '../../client/private/app/**/img/**/*-async/**/*.',
+    '../../client/private/app/**/img/**/*-async.'
+  ],
   templates: {
     components: '../../client/private/app/**/components/**/*.html',
     pages: [

@@ -1,4 +1,4 @@
-angular.module('app').factory('Phone', function ($resource) {
+angular.module('app.pages.phone').factory('Phone', function ($resource) {
   'use strict';
 
   return $resource('private/data/phones/:id.json', {}, {

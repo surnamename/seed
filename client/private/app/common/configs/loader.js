@@ -2,11 +2,12 @@ angular.module('app').config(function ($ocLazyLoadProvider) {
   'use strict';
 
   $ocLazyLoadProvider.config({
-    debug: true,
-    events: true,
+    debug: false,
+    events: false,
     modules: [
       {
         name: 'app.pages.phone',
+        insertBefore: '#loader',
         files: [
           'private/app/pages/phone-async/factories/resources/phone.js',
           'private/app/pages/phone-async/filters/checkmark.js',

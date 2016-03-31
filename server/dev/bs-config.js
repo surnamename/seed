@@ -1,3 +1,7 @@
+/**
+ * browser sync (lite-server) config file
+ * */
+
 module.exports = {
   port: 3000,
   injectChanges: true,
