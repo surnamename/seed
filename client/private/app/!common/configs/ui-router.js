@@ -2,8 +2,8 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider, $loca
   'use strict';
 
   $locationProvider.html5Mode(false);
-  $urlRouterProvider.otherwise('/phones');
-  $urlRouterProvider.when('/pages/phones/{id}', '/pages/phones/{id}/description');
+  $urlRouterProvider.otherwise('/user/phones');
+  $urlRouterProvider.when('/user/pages/phones/{id}', '/user/pages/phones/{id}/description');
 
   $stateProvider
 
@@ -33,22 +33,27 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider, $loca
       }
     })
 
-    .state('app.phones', {
-      url: 'phones',
+    .state('app.user', {
+      abstract: true,
+      url: 'user'
+    })
+
+    .state('app.user.phones', {
+      url: '/phones',
       views: {
         'full-content@': {template: '<user-phones></user-phones>'}
       }
     })
 
-    .state('app.pages', {
-      url: 'pages',
+    .state('app.user.pages', {
+      url: '/pages',
       views: {
         'pages-content@': {template: '<app-sidebar></app-sidebar>'},
         'footer@': {}
       }
     })
 
-    .state('app.pages.phones', {
+    .state('app.user.pages.phones', {
       abstract: true,
       url: '/phones',
       views: {
@@ -56,29 +61,29 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider, $loca
       }
     })
 
-    .state('app.pages.phones.id', {
+    .state('app.user.pages.phones.id', {
       url: '/:id',
       views: {
         'content': {template: '<user-phone></user-phone>'}
       }
     })
 
-    .state('app.pages.phones.id.description', {
+    .state('app.user.pages.phones.id.description', {
       url: '/description',
       views: {
         'content-tab': {template: '<user-phone-description></user-phone-description>'}
       }
     })
 
-    .state('app.pages.phones.id.characteristics', {
+    .state('app.user.pages.phones.id.characteristics', {
       url: '/characteristics',
       views: {
         'content-tab': {template: '<user-phone-characteristics></user-phone-characteristics>'}
       }
     })
 
-    .state('app.pages.phones.id.reviews', {
-      url: '/characteristics',
+    .state('app.user.pages.phones.id.reviews', {
+      url: '/reviews',
       views: {
         'content-tab': {template: '<user-phone-reviews></user-phone-reviews>'}
       }
