@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="phone-images">
+      <img data-ng-repeat="img in ::$ctrl.phone.images" data-ng-src="{{::img}}"
+           data-ng-class="{active: $ctrl.mainImageUrl === img}" class="phone">
+    </div>
+
+    <h1 data-ng-bind="::$ctrl.phone.name"></h1>
+
+    <ul class="phone-thumbs">
+      <li data-ng-repeat="img in ::$ctrl.phone.images">
+        <img data-ng-src="{{::img}}" data-ng-click="$ctrl.setImage(img)">
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="row m-v-20">
+  <div class="col-sm-12">
+    <div role="group" class="btn-group btn-group-justified">
+      <a data-ui-sref="app.pages.phones.id.description({id: $ctrl.phone.id})" role="button"
+         data-ui-sref-active="active" class="btn btn-default">Description</a>
+
+      <a data-ui-sref="app.pages.phones.id.characteristics({id: $ctrl.phone.id})" role="button"
+         data-ui-sref-active="active" class="btn btn-default">Characteristics</a>
+
+      <a data-ui-sref="app.pages.phones.id.reviews({id: $ctrl.phone.id})" role="button"
+         data-ui-sref-active="active" class="btn btn-default">Reviews</a>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <ui-view name="content-tab"></ui-view>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="container-fluid p-0">
+  <div class="well well-sm col-sm-3">
+    <ul>
+      <li ng-repeat="phone in $ctrl.phones | orderBy:'name'" data-ui-sref-active="active">
+        <a data-ui-sref="app.pages.phones.id({id: phone.id})" data-ng-bind="::phone.name"></a>
+      </li>
+    </ul>
+  </div>
+
+  <ui-view name="content" class="col-sm-9 content"></ui-view>
+</div>

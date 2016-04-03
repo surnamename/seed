@@ -9,9 +9,9 @@ module.exports = function(config) {
     browsers: ['PhantomJS'], // 'Chrome', 'Firefox'
 
     files: [
-      '../public/build/js/libs.min.js',
+      '../build/js/libs.min.js',
       'lib/angular/1.5.2/angular-mocks.js',
-      '../public/build/js/scripts.min.js',
+      '../build/js/scripts.min.js',
       'test/unit/**/*.js'
     ],
 

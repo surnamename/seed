@@ -34,11 +34,11 @@ var paths = {
     '../../client/private/app/**/img/**/*-async.'
   ],
   templates: {
-    components: '../../client/private/app/**/components/**/*.html',
+    components: '../../client/private/app/components/**/*.html',
     pages: [
-      '../../client/private/app/**/pages/**/*.html',
-      '!../../client/private/app/**/pages/**/*-async/**/*.html',
-      '!../../client/private/app/**/pages/**/*-async.html'
+      '../../client/private/app/pages/**/*.html',
+      '!../../client/private/app/pages/**/*-async/**/*.html',
+      '!../../client/private/app/pages/**/*-async.html'
     ],
     modals: '../../client/private/app/**/modals/**/*.html'
   },

@@ -1,0 +1,31 @@
+/* cross fading between routes with uiView */
+
+/*
+ui-view {
+    opacity: 1;
+    width: auto;
+    -webkit-transition: right 0.25s cubic-bezier(0.6, 0.04, 0.98, 0.335), padding-right 0.25s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    -moz-transition: right 0.25s cubic-bezier(0.6, 0.04, 0.98, 0.335), padding-right 0.25s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    transition: right 0.25s cubic-bezier(0.6, 0.04, 0.98, 0.335), padding-right 0.25s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+
+ui-view.ng-enter,
+ui-view.ng-leave {
+    -webkit-animation: all 0.5s linear;
+    -moz-animation: all 0.5s linear;
+    -o-animation: all 0.5s linear;
+    animation: all 0.5s linear;
+}
+
+ui-view.ng-enter {
+    opacity: 0;
+}
+
+ui-view.ng-enter-active {
+    opacity: 1;
+}
+
+ui-view.ng-leave,
+ui-view.ng-leave-active {
+    opacity: 0;
+}*/

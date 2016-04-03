@@ -1,0 +1,24 @@
+<div class="container-fluid navbar">
+  <nav role="navigation">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="navbar-header">
+            <button data-ng-click="$ctrl.collapse = !$ctrl.collapse" type="button" class="navbar-toggle">
+              <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="/">
+              <span class="logo">Your Logo</span>
+            </a>
+          </div>
+
+          <div collapse="$ctrl.collapse" class="navbar-right navbar-collapse">
+            <ul class="nav navbar-nav text-uppercase">
+              <li><a data-ui-sref="app.admin.settings">Admin Settings</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
